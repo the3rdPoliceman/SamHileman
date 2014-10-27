@@ -1,0 +1,316 @@
+// bower:scss
+@import "bourbon/dist/_bourbon.scss";
+// endbower
+
+/***** fonts *****/
+
+@font-face {
+    font-family: "LH-Line1-Sans";
+    src: url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.eot?#iefix");
+    src: url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.eot?#iefix") format("eot"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.woff") format("woff"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.ttf") format("truetype"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.svg#lh-line1-sans-thin-webfont") format("svg");
+}
+@font-face {
+    font-family: "Melbourne-Light";
+    src: url("../fonts/Melbourne-Light/Melbourne_light.eot?") format("eot"), url("../fonts/Melbourne-Light/Melbourne_light.woff") format("woff"), url("../fonts/Melbourne-Light/Melbourne_light.ttf") format("truetype"), url("../fonts/Melbourne-Light/Melbourne_light.svg#Melbourne-Light") format("svg");
+    font-weight: normal;
+    font-style: no
+}
+@font-face {
+    font-family: "Melbourne";
+    src: url("../fonts/Melbourne/Melbourne_reg.eot?") format("eot"), url("../fonts/Melbourne/Melbourne_reg.woff") format("woff"), url("../fonts/Melbourne/Melbourne_reg.ttf") format("truetype"), url("../fonts/Melbourne/Melbourne_reg.svg#Melbourne") format("svg");
+    font-weight: normal;
+    font-style: no
+}
+/***** variables *****/
+
+$background:url("../images/googleplus/milenas-paintings/red-sun-reduced.jpg");
+ $desaturated-background:url("../images/googleplus/milenas-paintings/red-sun-desaturated-2.jpg");
+ $color-overlay:rgba(0, 0, 0, 0.87);
+ $color-overlay-light:rgba(0, 0, 0, 0.75);
+ $color-overlay-text:#EEEEEE;
+ $color-overlay-text-hover:#FFFFFF;
+ $color-period-nav:#DDDDDD;
+ $color-period-nav-hover:#FFFFFF;
+ $border-separator:solid 1px #CCCCCC;
+ $standard-font-face:'Melbourne-Light';
+ $standard-font-size:20px;
+ $bold-font-face:'Melbourne';
+
+/****** main element styles *****/
+
+* {
+    font-family:$standard-font-face;
+    font-size: $standard-font-size;
+    font-weight:300;
+    margin:0;
+    padding:0;
+}
+html#period-page {
+    background:$desaturated-background no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+html#main-page {
+    background:$background no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+body {
+    font-family: $standard-font-face;
+    color:#333;
+}
+h1 {
+    font-size:100px;
+    font-weight:300;
+    /*border-bottom:$border-separator;*/
+    display:block;
+}
+h2 {
+    font-size:60px;
+    font-weight:700;
+    /*border-bottom:$border-separator;*/
+}
+nav a {
+    color: $color-overlay-text;
+    border-right-width:1px;
+    border-color:#DDDDDD;
+    padding-top: 2px;
+    &:last-of-type {
+        margin-right:0px;
+    }
+    &:first-of-type {
+        margin-left:0px;
+    }
+    &:hover {
+        color: $color-overlay-text-hover;
+    }
+}
+p {
+    margin-bottom:20px;
+}
+p:last-of-type {
+    margin-bottom:0px;
+}
+a.period-link {
+    color:#BBBBBB;
+    .period-navarrow-left {
+        float:left;
+        padding-right:8px;
+        padding-top: 15px;
+        padding-left: 5px;
+    }
+    .period-navarrow-right {
+        float:right;
+        padding-left:8px;
+        padding-top: 15px;
+        padding-right: 5px;
+    }
+    &:hover {
+        color:#FFFFFF;
+        .period-navarrow-left {
+            -webkit-transition: all 0.1s ease-in;
+            -moz-transition: all 0.1s ease-in;
+            -o-transition: all 0.1s ease-in;
+            padding-left: 0px;
+            padding-right:13px;
+        }
+        .period-navarrow-right {
+            -webkit-transition: all 0.1s ease-in;
+            -moz-transition: all 0.1s ease-in;
+            -o-transition: all 0.1s ease-in;
+            padding-left: 13px;
+            padding-right:0px;
+        }
+    }
+}
+.link {
+    text-decoration:none;
+    display:inline-block;
+    position:relative;
+}
+.link:after {
+    background:none repeat scroll 0 0 transparent;
+    bottom:0;
+    content:"";
+    display:block;
+    height:2px;
+    left:50%;
+    position:absolute;
+    background:#fff;
+    transition:width 0.3s ease 0s, left 0.3s ease 0s;
+    width:0;
+}
+.link:hover:after {
+    width:100%;
+    left:0;
+}
+.menu-separator {
+    border-left: 1px solid white;
+    float: right;
+    margin-left:15px;
+    margin-right:15px;
+    height:20px;
+}
+.minor {
+    float:right;
+}
+.text-link {
+    text-decoration: underline;
+    cursor:pointer;
+    font-family: $bold-font-face;
+    font-weight: 900;
+}
+/***** technical stuff *****/
+
+.browsehappy {
+    margin:0.2em 0;
+    background:#ccc;
+    color:#000;
+    padding:0.2em 0;
+}
+/***** intro & menu *****/
+
+.box {
+    background-color: $color-overlay-light;
+    color: $color-overlay-text;
+    padding: 20px 20px;
+}
+.title {
+    padding-bottom:0px;
+}
+.divider {
+    height: 20px;
+}
+.menu-content-divider {
+    @include clearfix;
+    height: 2px;
+}
+.period-title {
+    text-align:center;
+    float: left;
+    width:620px;
+    margin: 0px 0px 12px 0px;
+}
+.period-nav-prev {
+    color:$color-period-nav;
+    width: 150px;
+    padding: 15px 20px 0px 0px;
+    float:left;
+}
+.period-nav-next {
+    width: 150px;
+    padding: 15px 0px 0px 20px;
+    float:right;
+    text-align: right;
+}
+.period-nav-details-left {
+    float:left;
+    padding-top: 12px;
+}
+.period-nav-details-right {
+    float:right;
+    padding-top: 12px;
+}
+.period-nav-details-place {
+    font-family: $bold-font-face;
+    font-size:16px;
+    font-weight: 900;
+}
+.period-nav-details-time {
+    font-size:14px;
+}
+.desc {
+    /*padding:30px 0px 0px 0px;*/
+}
+.introbox {
+    margin-top: 100px;
+    margin-right: 10%;
+    width: 500px;
+    /*padding: 40px;*/
+    /*    background-color:$color-overlay;
+    color:$color-overlay-text;*/
+    float:right;
+}
+.header-image {
+    max-width: 100%;
+    height: auto;
+}
+.content {
+    margin-top: 0px;
+    margin-right:auto;
+    margin-left:auto;
+    color: $color-overlay-text;
+    background-color: $color-overlay;
+    width: 960px;
+    padding: 20px 20px 30px 20px;
+    font-weight: 300;
+    font-size: $standard-font-size;
+    font-family: $standard-font-face;
+    text-align:justify;
+}
+.top-menu {
+    margin-top: 0px;
+    margin-right:auto;
+    margin-left:auto;
+    color: $color-overlay-text;
+    background-color: $color-overlay;
+    width: 960px;
+    padding:12px 20px 12px 20px;
+    font-weight: 300;
+    font-size: $standard-font-size;
+    font-family: $standard-font-face;
+    text-align:justify;
+}
+.text {
+    column-count: 2;
+    column-gap: 20px;
+    column-rule: none;
+}
+.inline-image-right {
+    display: block;
+    float: right;
+    margin: 15px 0px 15px 15px;
+    vertical-align:bottom;
+}
+.inline-image-left {
+    display: block;
+    float: left;
+}
+.clearfix {
+    @include clearfix;
+}
+.homenav {
+    @include clearfix;
+}
+.topic {
+    @include clearfix;
+    padding-top: 14px;
+    padding-bottom: 8px;
+    border-top:$border-separator;
+    .link {
+        font-family: $standard-font-face;
+        float:left;
+        text-decoration:none;
+        font-size: 30px;
+        font-weight: 300;
+        color:$color-overlay-text;
+        &:hover {
+            color:$color-overlay-text-hover;
+        }
+    }
+    .linkdesc {
+        padding-top:8px;
+        float:right;
+        font-weight: 300;
+        font-size: $standard-font-size -2px;
+        font-style: italic;
+        vertical-align:bottom;
+    }
+}
+.last-topic {
+    border-bottom:$border-separator;
+}
