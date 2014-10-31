@@ -263,7 +263,6 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     collapseBooleanAttributes: true,
-                    collapseWhitespace: true,
                     conservativeCollapse: true,
                     removeAttributeQuotes: true,
                     removeCommentsFromCDATA: true,
@@ -319,11 +318,17 @@ module.exports = function(grunt) {
                         '*.{ico,png,txt}',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        'fonts/{,*/}*.*'
                     ]
                 }, {
                     src: 'node_modules/apache-server-configs/dist/.htaccess',
                     dest: '<%= config.dist %>/.htaccess'
+                }, { //for font-awesome
+                    expand: true,
+                    dot: true,
+                    cwd: 'bower_components/fontawesome',
+                    src: ['fonts/*.*'],
+                    dest: '<%= config.dist %>'
                 }]
             },
             styles: {
@@ -359,7 +364,7 @@ module.exports = function(grunt) {
                     port: 21,
                     authKey: 'key1'
                 },
-                src: 'build',
+                src: '<%= config.dist %>',
                 dest: '/www/samhileman.davemoore.ch/',
                 exclusions: ['build/**/.DS_Store', 'build/**/Thumbs.db', 'dist/tmp']
             }
@@ -425,7 +430,9 @@ module.exports = function(grunt) {
         'test',
         'build'
     ]);
+    grunt.loadNpmTasks('grunt-ftp-deploy');
+    grunt.loadNpmTasks('grunt-ftp');
 
-
+    grunt.registerTask('deploy-test', ['ftp-deploy:test']);
 
 };

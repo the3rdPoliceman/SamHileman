@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "~1.11.1",
     "bourbon": "~4.0.2",
-    "fontawesome": "~4.2.0"
+    "fontawesome": "~4.2.0",
+    "hyphenator": "svn+http://hyphenator.googlecode.com/svn/#~4.3.0"
   }
 }

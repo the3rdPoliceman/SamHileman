@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" id="main-page">
+<html class="no-js" id="main-page" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -26,39 +26,34 @@
 
     <div class="introbox">
         <div class="title box">
-            <header>
+            <header id="main-header">
                 <h1>Sam
                     <br>Hileman</h1>
             </header>
         </div>
-        <!-- <div class="divider"></div> -->
         <div class="desc box">
-            <p>Welcome to Sam's Post-Humous Website by some of family and friends. This site is to share the paintings, stories, movies, and photographs by and about Samuel Palmer Hileman, Jr. 1924-2001. Many of his paintings are scattered around the globe, and people often ask his children where they are and how can they see them again. This is an effort to share the ones that are easily found. It would be wonderful to find more. Sam was a story teller, and this site is also to share stories by and about him. They might be true, they might just be good stories. If you have one to share, you can send it in on page 3. Images also are welcome.</p>
-            <p>Kindly do not reproduce these paintings for commercial gain, but feel free to enjoy them in any way you choose: for learning, for fun, for sharing or making new things. Many thanks to the fantastic art photographer Jack Daily, and to all the people who let him into their homes to photograph the paintings</p>
+            <p>Welcome to Sam's posthumous website by some of family and friends. This site is to share the paintings, stories, movies, and photographs by and about Samuel Palmer Hileman, Jr. 1924-2001. Many of his paintings are scattered around the globe, and people often ask his children where they are and how can they see them again. This is an effort to share the ones that are easily found. It would be wonderful to find more. Sam was a story teller, and this site is also to share stories by and about him. They might be true, they might just be good stories. If you have one to share, you can send it in on page 3. Images also are welcome.</p>
+            <p>Many thanks to the fantastic art photographer Jack Daily, and to all the people who let him into their homes to photograph the paintings.</p>
+            <p></p>
         </div>
-        <!-- <div class="divider"></div> -->
         <div class="homenav box">
             <div class="topic">
-                <a class="link" href="writer.html">Writer</a>
-                <span class="linkdesc">Written works</span>
+                <a class="link" href="period1.html">Life</a>
+                <span class="linkdesc">Sam's life and work</span>
             </div>
             <div class="topic">
-                <a class="link" href="writer.html">Editor</a>
-                <span class="linkdesc">Details of works Sam edited</span>
+                <a class="link" href="people.html">People</a>
+                <span class="linkdesc">Some of the people in Sam's life</span>
             </div>
             <div class="topic">
-                <a class="link" href="painter.html">Painter</a>
+                <a class="link" href="painter.html">Archive</a>
                 <div class="linkdesc">
-                    Collection of Sam's Paintings
+                    Artifacts about and by Sam
                 </div>
             </div>
-            <div class="topic">
-                <a class="link" href="writer.html">Father</a>
-                <span class="linkdesc">Sam's family life</span>
-            </div>
             <div class="topic last-topic">
-                <a class="link" href="writer.html">Friend</a>
-                <span class="linkdesc">A few of Sam's many friends</span>
+                <a class="link" href="writer.html">Contact</a>
+                <span class="linkdesc">Get in touch with Sam's family</span>
             </div>
         </div>
     </div>
@@ -67,8 +62,30 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/hyphenator/hyphenator.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    <script type="text/javascript">
+    Hyphenator.config({
+        displaytogglebox: false,
+        minwordlength: 6,
+        orphancontrol: 2,
+        useCSS3hyphenation: true,
+        classname: 'desc'
+    });
+    </script>
+
+    <script type="text/javascript">
+    $("a.link").click(function(e) {
+        e.preventDefault();
+        $(".introbox").animate({
+            margin - right: 800px
+        }, 5000, function() {
+            document.location.href = this.href;
+        });
+    });
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
