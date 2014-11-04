@@ -5,21 +5,21 @@
 /***** fonts *****/
 
 @font-face {
-    font-family: "LH-Line1-Sans";
-    src: url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.eot?#iefix");
-    src: url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.eot?#iefix") format("eot"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.woff") format("woff"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.ttf") format("truetype"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.svg#lh-line1-sans-thin-webfont") format("svg");
+    font-family:"LH-Line1-Sans";
+    src:url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.eot?#iefix");
+    src:url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.eot?#iefix") format("eot"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.woff") format("woff"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.ttf") format("truetype"), url("../fonts/LHLine1Sans_webkit/lh-line1-sans-thin-webfont.svg#lh-line1-sans-thin-webfont") format("svg");
 }
 @font-face {
-    font-family: "Melbourne-Light";
-    src: url("../fonts/Melbourne-Light/Melbourne_light.eot?") format("eot"), url("../fonts/Melbourne-Light/Melbourne_light.woff") format("woff"), url("../fonts/Melbourne-Light/Melbourne_light.ttf") format("truetype"), url("../fonts/Melbourne-Light/Melbourne_light.svg#Melbourne-Light") format("svg");
-    font-weight: normal;
-    font-style: no
+    font-family:"Melbourne-Light";
+    src:url("../fonts/Melbourne-Light/Melbourne_light.eot?") format("eot"), url("../fonts/Melbourne-Light/Melbourne_light.woff") format("woff"), url("../fonts/Melbourne-Light/Melbourne_light.ttf") format("truetype"), url("../fonts/Melbourne-Light/Melbourne_light.svg#Melbourne-Light") format("svg");
+    font-weight:normal;
+    font-style:no
 }
 @font-face {
-    font-family: "Melbourne";
-    src: url("../fonts/Melbourne/Melbourne_reg.eot?") format("eot"), url("../fonts/Melbourne/Melbourne_reg.woff") format("woff"), url("../fonts/Melbourne/Melbourne_reg.ttf") format("truetype"), url("../fonts/Melbourne/Melbourne_reg.svg#Melbourne") format("svg");
-    font-weight: normal;
-    font-style: no
+    font-family:"Melbourne";
+    src:url("../fonts/Melbourne/Melbourne_reg.eot?") format("eot"), url("../fonts/Melbourne/Melbourne_reg.woff") format("woff"), url("../fonts/Melbourne/Melbourne_reg.ttf") format("truetype"), url("../fonts/Melbourne/Melbourne_reg.svg#Melbourne") format("svg");
+    font-weight:normal;
+    font-style:no
 }
 /***** variables *****/
 
@@ -40,253 +40,299 @@ $background:url("../images/googleplus/red-sun-reduced.jpg");
 /****** main element styles *****/
 
 * {
-    font-family:$standard-font-face;
-    font-size: $standard-font-size;
-    font-weight:300;
-    margin:0;
-    padding:0;
+    font-family: $standard-font-face;
+    font-size:$standard-font-size;
+    margin: 0;
+    padding: 0;
 }
 html#period-page {
-    background:$desaturated-background no-repeat center center fixed;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
+    background: $desaturated-background no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 html#main-page {
-    background:$background no-repeat center center fixed;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
+    background: $background no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 body {
-    font-family: $standard-font-face;
-    color:#333;
+    font-family:$standard-font-face;
+    color: #333;
+    -webkit-font-smoothing:subpixel-antialiased;
 }
 h1 {
-    font-size:100px;
+    font-size: 100px;
     font-weight:300;
     /*border-bottom:$border-separator;*/
-    display:block;
+    display: block;
 }
 h2 {
-    font-size:60px;
-    font-weight:700;
+    font-size: 60px;
     /*border-bottom:$border-separator;*/
 }
 nav a {
-    color: $color-overlay-text;
-    border-right-width:1px;
-    border-color:#DDDDDD;
-    padding-top: 2px;
+    color:$color-overlay-text;
+    border-right-width: 1px;
+    border-color: #DDDDDD;
+    padding-top:2px;
     &:last-of-type {
-        margin-right:0px;
+        margin-right: 0px;
     }
     &:first-of-type {
-        margin-left:0px;
+        margin-left: 0px;
     }
     &:hover {
-        color: $color-overlay-text-hover;
+        color:$color-overlay-text-hover;
     }
 }
 p {
-    margin-bottom:$standard-line-height;
-    hyphens:auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    line-height: $standard-line-height;
+    margin-bottom: $standard-line-height;
+    hyphens: auto;
+    -webkit-hyphens:auto;
+    -moz-hyphens:auto;
+    line-height:$standard-line-height;
     &:last-of-type {
-        margin-bottom:0px;
+        margin-bottom: 0px;
     }
 }
 a.period-link {
-    color:#BBBBBB;
+    color: #BBBBBB;
     .period-navarrow-left {
-        float:left;
-        padding-right:8px;
-        padding-top: 15px;
-        padding-left: 5px;
+        float: left;
+        padding-right: 8px;
+        padding-top:15px;
+        padding-left:5px;
     }
     .period-navarrow-right {
-        float:right;
-        padding-left:8px;
-        padding-top: 15px;
-        padding-right: 5px;
+        float: right;
+        padding-left: 8px;
+        padding-top:15px;
+        padding-right:5px;
     }
     &:hover {
-        color:#FFFFFF;
+        color: #FFFFFF;
         .period-navarrow-left {
-            -webkit-transition: all 0.1s ease-in;
-            -moz-transition: all 0.1s ease-in;
-            -o-transition: all 0.1s ease-in;
-            padding-left: 0px;
-            padding-right:13px;
+            -webkit-transition:all 0.1s ease-in;
+            -moz-transition:all 0.1s ease-in;
+            -o-transition:all 0.1s ease-in;
+            padding-left:0px;
+            padding-right: 13px;
         }
         .period-navarrow-right {
-            -webkit-transition: all 0.1s ease-in;
-            -moz-transition: all 0.1s ease-in;
-            -o-transition: all 0.1s ease-in;
-            padding-left: 13px;
-            padding-right:0px;
+            -webkit-transition:all 0.1s ease-in;
+            -moz-transition:all 0.1s ease-in;
+            -o-transition:all 0.1s ease-in;
+            padding-left:13px;
+            padding-right: 0px;
         }
     }
 }
 .link {
-    text-decoration:none;
-    display:inline-block;
-    position:relative;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
 }
 .link:after {
-    background:none repeat scroll 0 0 transparent;
-    bottom:0;
-    content:"";
-    display:block;
-    height:2px;
-    left:50%;
-    position:absolute;
-    background:#fff;
-    transition:width 0.3s ease 0s, left 0.3s ease 0s;
-    width:0;
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
 }
 .link:hover:after {
-    width:100%;
-    left:0;
+    width: 100%;
+    left: 0;
 }
 .menu-separator {
-    border-left: 1px solid white;
-    float: right;
-    margin-left:15px;
-    margin-right:15px;
-    height:20px;
+    border-left:1px solid white;
+    float:right;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 20px;
 }
 .minor {
-    float:right;
+    float: right;
 }
 .text-link {
-    cursor: pointer;
-    border-bottom: 2px solid #BBBBBB;
-    color:#EEEEEE;
+    cursor:pointer;
+    border-bottom:2px solid #BBBBBB;
+    color: #EEEEEE;
     &:hover {
-        border-bottom: 2px solid #FFFFFF;
-        color:#FFFFFF;
+        border-bottom:2px solid #FFFFFF;
+        color: #FFFFFF;
     }
 }
 /***** technical stuff *****/
 
 .browsehappy {
-    margin:0.2em 0;
-    background:#ccc;
-    color:#000;
-    padding:0.2em 0;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 /***** intro & menu *****/
 
 .title {
-    padding-bottom:0px;
+    padding-bottom: 0px;
 }
 .picture-text-divider {
     @include clearfix;
-    height: 12px;
+    height:12px;
 }
 .menu-content-divider {
     @include clearfix;
-    height: 2px;
+    height:2px;
 }
 .period-title {
-    text-align:center;
-    float: left;
-    width:560px;
-    margin: -1px 0px 16px 0px;
+    text-align: center;
+    float:left;
+    width: 560px;
+    margin:-1px 0px 16px 0px;
 }
 .period-nav-prev {
-    color:$color-period-nav;
-    width: 150px;
-    padding: 15px 10px 0px 0px;
-    float:left;
+    color: $color-period-nav;
+    width:150px;
+    padding:15px 10px 0px 0px;
+    float: left;
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:0.3s;
+    -moz-animation-duration:0.3s;
+    animation-duration:0.3s;
+    -webkit-animation-delay:0.3s;
+    -moz-animation-delay:0.3s;
+    animation-delay:0.3s;
 }
 .period-nav-next {
-    width: 150px;
-    padding: 15px 0px 0px 10px;
-    float:right;
-    text-align: right;
+    width:150px;
+    padding:15px 0px 0px 10px;
+    float: right;
+    text-align:right;
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:0.3s;
+    -moz-animation-duration:0.3s;
+    animation-duration:0.3s;
+    -webkit-animation-delay:0.6s;
+    -moz-animation-delay:0.6s;
+    animation-delay:0.6s;
 }
 .period-nav-details-left {
-    float:left;
-    padding-top: 12px;
+    float: left;
+    padding-top:12px;
 }
 .period-nav-details-right {
-    float:right;
-    padding-top: 12px;
+    float: right;
+    padding-top:12px;
 }
 .period-nav-details-place {
-    font-family: $bold-font-face;
-    font-size:16px;
-    font-weight: 900;
+    font-family:$bold-font-face;
+    font-size: 16px;
 }
 .period-nav-details-time {
-    font-size:14px;
+    font-size: 14px;
 }
 .desc {
     /*padding:30px 0px 0px 0px;*/
 }
 #main-header {
-    margin-left: -6px;
-    padding-bottom:9px;
+    margin-left:-6px;
+    padding-bottom: 9px;
 }
 .introbox {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 80px;
-    width: 460px;
-    padding: 40px;
-    color:$color-overlay-text;
-    background-color: $color-overlay-light;
-    float:right;
-    text-align: justify;
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-right:80px;
+    width:460px;
+    padding:40px;
+    color: $color-overlay-text;
+    background-color:$color-overlay-light;
+    float: right;
+    text-align:justify;
 }
 .header-image {
-    max-width: 100%;
-    height: auto;
+    max-width:100%;
+    height:auto;
 }
 .content {
-    margin:0px auto 20px auto;
-    color: $color-overlay-text;
-    background-color: $color-overlay;
-    width: 880px;
-    padding: 20px 20px 20px 20px;
-    font-weight: 300;
-    font-size: $standard-font-size;
-    font-family: $standard-font-face;
-    text-align:justify;
+    margin: 0px auto 20px auto;
+    color:$color-overlay-text;
+    background-color:$color-overlay;
+    width:880px;
+    padding:20px 20px 20px 20px;
+    font-size:$standard-font-size;
+    font-family:$standard-font-face;
+    text-align: justify;
 }
 .top-menu {
-    margin-top: 0px;
-    margin-right:auto;
-    margin-left:auto;
-    color: $color-overlay-text;
-    background-color: $color-overlay;
-    width: 880px;
-    padding:12px 20px 12px 20px;
-    font-weight: 300;
-    font-size: $standard-font-size;
-    font-family: $standard-font-face;
-    text-align:justify;
+    margin-top:0px;
+    margin-right: auto;
+    margin-left: auto;
+    color:$color-overlay-text;
+    background-color:$color-overlay;
+    width:880px;
+    padding: 12px 20px 12px 20px;
+    font-size:$standard-font-size;
+    font-family:$standard-font-face;
+    text-align: justify;
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 .text {
-    column-count: 2;
-    column-gap: 20px;
-    column-rule: none;
+    column-count:2;
+    column-gap:20px;
+    column-rule:none;
 }
 .inline-image-right {
-    display: block;
-    float: right;
-    margin: 5px 0px 6px 10px;
-    vertical-align:bottom;
+    display:block;
+    float:right;
+    margin:5px 0px 6px 10px;
+    vertical-align: bottom;
 }
 .inline-image-left {
-    display: block;
-    float: left;
+    display:block;
+    float:left;
 }
 .clearfix {
     @include clearfix;
@@ -296,30 +342,28 @@ a.period-link {
 }
 .topic {
     @include clearfix;
-    padding-top: 14px;
-    padding-bottom: 8px;
-    border-top:$border-separator;
+    padding-top:14px;
+    padding-bottom:8px;
+    border-top: $border-separator;
     .link {
-        font-family: $standard-font-face;
-        float:left;
-        text-decoration:none;
-        font-size: 28px;
-        font-weight: 300;
-        color:$color-overlay-text;
+        font-family:$standard-font-face;
+        float: left;
+        text-decoration: none;
+        font-size:28px;
+        color: $color-overlay-text;
         &:hover {
-            color:$color-overlay-text-hover;
+            color: $color-overlay-text-hover;
         }
     }
     .linkdesc {
-        padding-top:8px;
-        float:right;
-        font-weight: 300;
-        font-size: $standard-font-size -2px;
-        font-style: italic;
-        vertical-align:bottom;
-        margin-right: 3px;
+        padding-top: 8px;
+        float: right;
+        font-size:$standard-font-size -2px;
+        font-style:italic;
+        vertical-align: bottom;
+        margin-right:3px;
     }
     &:last-of-type {
-        border-bottom:$border-separator;
+        border-bottom: $border-separator;
     }
 }
